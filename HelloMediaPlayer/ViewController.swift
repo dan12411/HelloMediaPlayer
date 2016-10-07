@@ -13,15 +13,21 @@ import MediaPlayer
 
 /// 2. 服從MPMediaPickerControllerDelegate
 class ViewController: UIViewController, MPMediaPickerControllerDelegate {
+
+    /// 8. or 7-1. 產生 musicPlayer
+    var musicPlayer: MPMusicPlayerController?
     
+    /////////////////////
+    //// Stop Button ////
+    /////////////////////
     /// 9. 停止播放音樂
     @IBAction func stopMusic(_ sender: UIButton) {
         musicPlayer?.stop()
     }
     
-    /// 8. or 7-1. 產生 musicPlayer
-    var musicPlayer: MPMusicPlayerController?
-    
+    /////////////////////
+    //// Play Button ////
+    /////////////////////
     @IBAction func myPlay(_ sender: UIButton) {
         
         /// 3. 產生讓使用者選音樂的MediaPlayer
